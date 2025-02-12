@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.cursive-text {
+  font-family: "League Script", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.shutter {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+
+  /* animation: fadeout 1s; */
+  animation: shutterup 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes shutterup {
+  100% {
+    position: absolute;
+    top: -105vh;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.loader {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  border: 10px solid goldenrod;
+  border-top: 10px solid red;
+  animation: loading 2s infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes loading {
+  0% {
+    rotate: 0;
+  }
+
+  50% {
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.loader-content {
+  font-size: 1.4rem;
+}
+
+.background {
+  background: url("background.jpg");
+  filter: blur(2px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  margin: 2rem;
+  align-items: center;
+}
+
+.top-heading {
+  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-weight: lighter;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.our-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.our-logo img {
+  height: 14rem;
+  width: 12rem;
+  margin: 3rem 3rem 1rem 3rem;
+  filter: drop-shadow(0 0 20px goldenrod);
+}
+
+.site-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.text-container {
+  font-size: 1.5rem;
+  align-items: center;
+  margin: 1rem 4rem;
+  text-align: center;
+}
+
+.instructor {
+  font-weight: 900;
+}
+
+.course {
+  color: #d6c95d;
+}
+
+.notification {
+  font-size: 1.5rem;
+  margin: 3rem 4rem;
+  color: #8f863b;
+  text-align: center;
+}
+
+.website {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  text-align: right;
+}
+
+.website a {
+  text-decoration: none;
+}
+
+@media (max-width: 527px) {
+  body {
+    background: black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    margin: 0.8rem;
+    align-items: center;
+  }
+
+  .top-heading {
+    font-size: 2.5rem;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    font-weight: lighter;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .our-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .our-logo img {
+    height: 12rem;
+    width: 10rem;
+    margin: 2rem 3rem 1rem 3rem;
+    filter: drop-shadow(0 0 20px goldenrod);
+  }
+
+  .site-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+
+  .text-container {
+    font-size: 1.5rem;
+    align-items: center;
+    margin: 1rem 1rem;
+    text-align: justify;
+    line-height: 2rem;
+  }
+
+  .instructor {
+    font-weight: 900;
+  }
+
+  .course {
+    color: #d6c95d;
+    font-weight: 700;
+  }
+
+  .notification {
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+    color: #8f863b;
+    text-align: justify;
+    line-height: 2rem;
+  }
+
+  .website {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+
+  .website a {
+    text-decoration: none;
+  }
+}
